@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBHIYOZO ATTORNEYS</title>
+  <link rel="stylesheet" href="style.css" />
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
+
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+   <a href="index.html" class="logo">
+    <img src="1.png" alt="Law Firm Logo">
+   </a>
+
+    <!-- Hamburger Icon -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+      &#9776;
+    </button>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="practice.html">Practice Areas</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+ 
+
+  <section class="hero-slider">
+  <div class="slider">
+    <div class="slide" style="background-image: url('3.jpg');"></div>
+    <div class="slide" style="background-image: url('5.jpg');"></div>
+    <div class="slide" style="background-image: url('6.jpg');"></div>
+    <div class="slide" style="background-image: url('7.jpg');"></div>
+  </div>
+  <div class="hero-text">
+    <h1>We Fight For Justice</h1>
+    <p>Reliable legal services for your peace of mind.</p>
+    <a href="contact.html" class="btn">Contact Us</a>
+  </div>
+</section>
+
+
+  <section class="practice-areas">
+  <h2>Practice Areas</h2>
+  <p class="intro">We specialize in these key areas to best serve our clients:</p>
+
+  <div class="areas-grid">
+    <div class="area-card fade-in">
+      <i class="lucide lucide-shield"></i>
+      <h3>Criminal Litigation</h3>
+      <p>Protecting your rights in all types of criminal cases.</p>
+    </div>
+
+    <div class="area-card fade-in">
+      <i class="lucide lucide-users"></i>
+      <h3>Cicil Litigation</h3>
+      <p>Handling disputes and conflicts while prioritizing your goals.</p>
+    </div>
+
+    <div class="area-card fade-in">
+      <i class="lucide lucide-file-text"></i>
+      <h3>General Litigation and Alternative Dispute Resolution (ADR)</h3>
+      <p>Offering cost-effective and timely resolutions.</p>
+    </div>
+
+    <div class="area-card fade-in">
+      <i class="lucide lucide-briefcase"></i>
+      <h3>Estate Planning and Wills</h3>
+      <p>Securing your legacy with trusts, wills, and estates.</p>
+    </div>
+  </div>
+
+  <a href="practice.html" class="view-more-btn fade-in">View More</a>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Mbhiyozo Attorneys. All rights reserved.
+  </footer>
+
+  <!-- JavaScript for Hamburger Toggle -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      hamburger.classList.toggle('active');
+
+      // Toggle icon between ☰ and ✕
+      if (hamburger.classList.contains('active')) {
+        hamburger.innerHTML = '&#10005;'; // ✕
+      } else {
+        hamburger.innerHTML = '&#9776;'; // ☰
+      }
+    });
+  </script>
+
+  <script>
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOnScroll = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  faders.forEach(fadeEl => appearOnScroll.observe(fadeEl));
+</script>
+
+
+</body>
+</html>

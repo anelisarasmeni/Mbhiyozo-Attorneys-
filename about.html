@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Law Firm</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+    <img src="1.png" alt="Law Firm Logo">
+   </a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="practice.html">Practice Areas</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  
+
+  <section class="hero-slider">
+  <div class="slider">
+    <div class="slide" style="background-image: url('3.jpg');"></div>
+    <div class="slide" style="background-image: url('5.jpg');"></div>
+    <div class="slide" style="background-image: url('6.jpg');"></div>
+    <div class="slide" style="background-image: url('7.jpg');"></div>
+  </div>
+  <div class="hero-text">
+    <h1>About Us</h1>
+    <p>Years of experience in delivering justice with integrity.</p>
+    
+  </div>
+</section>
+
+  <section class="content" style="padding: 2rem;">
+    <h2 style="color: #d4af37;">Our Story</h2>
+    <p>At Mbhiyozo Attorneys Inc., we are driven by a passion for justice and a commitment to serving our clients with excellence.
+       </p>
+     
+    <p>With extensive experience gained at Legal Aid, where we handled high-stakes cases, we thrive on the challenges of litigation
+       and representing our clients’ interests. <br>Our team embraces long hours and late nights, finding reward in the pursuit of 
+       justice. Yet, we balance hard work with a sense of fun, fostering a vibrant environment where creativity and growth flourish.</p>
+
+    <p>
+      We are committed to understanding you—our client—your business, and your unique needs. 
+      Whether providing comprehensive legal solutions or collaborating with your existing advisers, we tailor our services 
+      to deliver results that give you a competitive edge. At Mbhiyozo Attorneys Inc., we don’t just work for you; we partner with you to achieve your goals.
+    </p>
+
+    <p>
+      Our team is empowered to grow, innovate, and realize their full potential, ensuring we bring fresh perspectives and unwavering dedication to every case. 
+      From criminal defense to family law, medical negligence to debt collection, we offer expertise across diverse legal fields, always prioritizing your interests.
+    </p>
+  </section>
+
+  <section class="about-director">
+  <div class="about-content">
+    <div class="about-text">
+      <h2 style="color: #d4af37;">Meet Our Director</h2>
+      <p>
+        Led by our Director, Aluve Mbhiyozo, a proud University of Fort Hare alumnus with a Bachelor of Laws degree, our firm brings a fresh, 
+       dynamic approach to legal practice.<br> Hailing from a small village in eLusikisiki, Eastern Cape, Aluve’s journey reflects resilience 
+       and dedication, qualities that define our firm’s ethos.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="4.jpg" alt="Director Jane Doe">
+    </div>
+  </div>
+</section>
+
+
+<section class="content" style="padding: 2rem;">
+  <p>
+    Choose Mbhiyozo Attorneys Inc. for legal representation that is passionate, professional, and personalized. 
+    Let us help you navigate your legal journey with confidence.
+
+Contact us today to discuss how we can serve you.
+
+
+
+  </p>
+</section>
+<section class="contact-cta slide-in-hidden">
+  <h3>Have Questions or Need Legal Help?</h3>
+  <a href="contact.html" class="btn-contact">Contact Us</a>
+</section>
+
+  <footer>&copy; 2025 Mbhiyozo Attorneys. All rights reserved.</footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      hamburger.classList.toggle('active');
+      hamburger.innerHTML = hamburger.classList.contains('active') ? '&#10005;' : '&#9776;';
+    });
+  </script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("slide-in-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1
+      }
+    );
+
+    const elements = document.querySelectorAll(".slide-in-hidden");
+    elements.forEach(el => observer.observe(el));
+  });
+</script>
+
+</body>
+</html>

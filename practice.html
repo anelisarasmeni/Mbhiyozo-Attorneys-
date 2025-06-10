@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Practice Areas - Law Firm</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .area-card {
+      background: #222;
+      color: #fff;
+      padding: 2rem;
+      margin: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .area-card:hover {
+      background: #333;
+    }
+
+    .card-extra {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out, padding 0.3s;
+      padding: 0 0;
+    }
+
+    .area-card.expanded .card-extra {
+      max-height: 200px;
+      padding: 1rem 0 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+    <img src="1.png" alt="Law Firm Logo">
+   </a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="practice.html">Practice Areas</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-slider">
+  <div class="slider">
+    <div class="slide" style="background-image: url('3.jpg');"></div>
+    <div class="slide" style="background-image: url('5.jpg');"></div>
+    <div class="slide" style="background-image: url('6.jpg');"></div>
+    <div class="slide" style="background-image: url('7.jpg');"></div>
+  </div>
+  <div class="hero-text">
+    <h1>Our Practice Areas</h1>
+    <p>Expert legal representation across multiple fields.</p>
+  </div>
+</section>
+
+
+  <!-- Practice Areas Grid -->
+  <section class="practice-page">
+    <div class="areas-grid">
+      <div class="area-card fade-in">
+        <i class="lucide lucide-shield"></i>
+        <h3>Criminal Litigation</h3>
+        <p>Protecting your rights in criminal investigations and trials.</p>
+        <div class="card-extra">
+          <p>Facing criminal charges can be daunting. Our experienced legal team provides robust defense strategies to protect your rights and achieve the best possible outcome. 
+            From bail applications to trial representation, we regularly handle criminal cases at Magistrate Court, Regional Court and High Court levels, including (but not limited to) the following criminal offences:
+            Bail applications;
+Trial services;
+Appeals;
+Review applications;
+Applications for the challenging and setting aside of search and arrest warrants;
+Assisting individuals and corporations with investigating and initiating criminal prosecutions;
+Asset forfeiture proceedings;
+Consultations;
+After-hours bail applications.
+          </p>
+        </div>
+      </div>
+
+      <div class="area-card fade-in">
+        <i class="lucide lucide-users"></i>
+        <h3>Civil Litigation</h3>
+        <p>Handling disputes and conflicts while prioritizing your goals.</p>
+        <div class="card-extra">
+          <p>
+            Disputes can disrupt your life or business. Our civil litigation experts offer strategic solutions to resolve conflicts efficiently, 
+            whether through negotiation or court proceedings. 
+            We handle matters such as property disputes, breach of contract, and delictual claims with precision and care.
+             Let us fight for your interests with a tailored approach that prioritizes your goals.
+          </p>
+        </div>
+      </div>
+
+      <div class="area-card fade-in">
+        <i class="lucide lucide-file-text"></i>
+        <h3>Estate Planning and Wills</h3>
+        <p>Comprehensive estate solutions including wills and trusts.</p>
+        <div class="card-extra">
+          <p>
+            Planning for the future is essential. Our estates planning and wills services ensure your assets are protected 
+            and your wishes are honored. We provide expert guidance in drafting wills, establishing trusts, and managing estate 
+            administration. 
+            With a compassionate and meticulous approach, we help you secure peace of mind for you and your loved ones.
+            Our estate planning services help you secure your assets, provide for loved ones, and ensure your final wishes 
+            are honored through carefully crafted legal documents.</p>
+        </div>
+      </div>
+
+      <div class="area-card fade-in">
+        <i class="lucide lucide-briefcase"></i>
+        <h3>General Litigation and Alternative Dispute Resolution (ADR)</h3>
+        <p>Offering cost-effective and timely resolutions.</p>
+        <div class="card-extra">
+          <p>Not every dispute requires a courtroom. Our firm excels in general litigation and ADR, offering cost-effective and timely 
+            resolutions. From mediation and arbitration to complex litigation, we address a wide range of legal issues with expertise. 
+            Our goal is to resolve your matter swiftly, minimizing stress while maximizing results.</p>
+        </div>
+      </div>
+
+      <div class="area-card fade-in">
+        <i class="lucide lucide-briefcase"></i>
+        <h3>Family Law and Matrimonial Matters</h3>
+        <p>Compassionate guidance through sensitive family matters.</p>
+        <div class="card-extra">
+          <p>Family matters require sensitivity and expertise. We offer comprehensive support in divorce, child custody, maintenance, 
+            and matrimonial property disputes. Our team is committed to achieving fair outcomes while prioritizing your family’s 
+            well-being. 
+            Whether through negotiation or litigation, we provide personalized solutions to navigate these challenging times.</p>
+        </div>
+      </div>
+
+      <div class="area-card fade-in">
+        <i class="lucide lucide-briefcase"></i>
+        <h3>Medical Negligence</h3>
+        <p>Offering compassionate guidance through sensitive medical matters.</p>
+        <div class="card-extra">
+          <p>If you’ve suffered due to medical malpractice, you deserve justice. Our medical negligence specialists hold 
+            healthcare providers accountable for substandard care, helping you secure compensation for damages. 
+            From misdiagnosis to surgical errors, we combine legal expertise with medical insight to build strong cases, 
+            ensuring your rights are protected.</p>
+        </div>
+      </div>
+
+      <div class="area-card fade-in">
+        <i class="lucide lucide-briefcase"></i>
+        <h3>MVA and Personal Injury Claims</h3>
+        <p>Handling RAF claims and other personal injury matters with tenacuty.</p>
+        <div class="card-extra">
+          <p>Injured in a motor vehicle accident or due to someone else’s negligence? Our team fights for your right to fair compensation.
+             We handle Road Accident Fund (RAF) claims, slip-and-fall cases, and other personal injury matters with tenacity. 
+            Let us guide you through the claims process to secure the financial recovery you deserve.</p>
+        </div>
+      </div>
+
+      <div class="area-card fade-in">
+        <i class="lucide lucide-briefcase"></i>
+        <h3>Contracts and Lease Agreements</h3>
+        <p>our meticulous approach ensures clarity and compliance, minimizing future disputes.</p>
+        <div class="card-extra">
+          <p>Clear, enforceable contracts are the foundation of successful relationships. We draft, review, and negotiate 
+            contracts and lease agreements to protect your interests, whether for business or personal purposes. 
+            From commercial leases to service agreements, our meticulous approach ensures clarity and compliance, minimizing 
+            future disputes.
+
+</p>
+        </div>
+      </div>
+    
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>&copy; 2025 Your Law Firm. All rights reserved.</footer>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('navLinks');
+
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+        hamburger.classList.toggle('active');
+        hamburger.innerHTML = hamburger.classList.contains('active') ? '&#10005;' : '&#9776;';
+      });
+
+      const faders = document.querySelectorAll('.fade-in');
+      const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      faders.forEach(fadeEl => appearOnScroll.observe(fadeEl));
+
+      const cards = document.querySelectorAll('.area-card');
+      cards.forEach(card => {
+        card.addEventListener('click', () => {
+          card.classList.toggle('expanded');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
