@@ -40,19 +40,23 @@
   <section class="contact-section">
     <div class="contact-container">
       <h2>Send Us a Message</h2>
-      <form class="contact-form" id="contactForm" action="https://formspree.io/f/mvgrknww" method="post">
-        <label for="name">Name</label>
-        <input type="text" id="name" required />
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/mvgrknww" method="POST">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" required />
 
-        <label for="email">Email</label>
-        <input type="email" id="email" required />
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required />
 
-        <label for="message">Message</label>
-        <textarea id="message" rows="5" required></textarea>
+  <label for="message">Message</label>
+  <textarea id="message" name="message" rows="5" required></textarea>
 
-        <button type="submit">Send Message</button>
-        <p class="confirmation" id="confirmationMessage">Thank you! We'll be in touch shortly.</p>
-      </form>
+  <!-- Optional anti-spam hidden field -->
+  <input type="text" name="_gotcha" style="display:none" />
+
+  <button type="submit">Send Message</button>
+  <p class="confirmation" id="confirmationMessage" style="display: none;">Thank you! We'll be in touch shortly.</p>
+</form>
+
     </div>
 
     <div class="office-info">
@@ -91,22 +95,34 @@
   <footer>&copy; 2025 Mbhiyozo Attorneys. All rights reserved.</footer>
 
   <script>
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-      hamburger.classList.toggle('active');
-      hamburger.innerHTML = hamburger.classList.contains('active') ? '&#10005;' : '&#9776;';
-    });
+  const form = document.getElementById('contactForm');
+  const confirmation = document.getElementById('confirmationMessage');
 
-    // Simple confirmation message
-    const form = document.getElementById('contactForm');
-    const confirmation = document.getElementById('confirmationMessage');
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      confirmation.style.display = 'block';
-      form.reset();
-    });
-  </script>
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        confirmation.style.display = 'block';
+        form.reset();
+      } else {
+        alert('Oops! There was a problem sending your message.');
+      }
+    } catch (error) {
+      alert('Error: Network issue or wrong Formspree endpoint.');
+    }
+  });
+</script>
+
 </body>
 </html>
