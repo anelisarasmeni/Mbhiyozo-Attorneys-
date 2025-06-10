@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQs | Mbiyozo Attorneys</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+ <style>
+    body {
+      background-color: #0d0d0d;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .faq-section {
+      max-width: 800px;
+      margin: 5rem auto;
+      padding: 0 1rem;
+    }
+
+    .faq-section h1 {
+      text-align: center;
+      color: #d4af37;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #333;
+      padding: 1rem 0;
+    }
+
+    .faq-question {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #d4af37;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      color: #ccc;
+      margin-top: 0.5rem;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 200px; /* adjust for answer size */
+    }
+
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+
+    .faq-question i {
+      transition: transform 0.3s ease;
+    }
+    .faq-contact-cta {
+  text-align: center;
+  margin-top: 3rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+.faq-contact-cta.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-button {
+  display: inline-block;
+  background-color: #d4af37;
+  color: #0d0d0d;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.slide-button:hover {
+  background-color: #b38e2e;
+}
+.faq-intro {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.faq-intro.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+  </style>
+</head>
+<body>
+
+
+  <!-- Navbar -->
+  <nav class="navbar">
+   <a href="index.html" class="logo">
+    <img src="1.png" alt="Law Firm Logo">
+   </a>
+
+    <!-- Hamburger Icon -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+      &#9776;
+    </button>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="practice.html">Practice Areas</a></li>
+      <li><a href="faq.html">FAQ's</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+   <section class="hero-slider">
+  <div class="slider">
+    <div class="slide" style="background-image: url('3.jpg');"></div>
+    <div class="slide" style="background-image: url('5.jpg');"></div>
+    <div class="slide" style="background-image: url('6.jpg');"></div>
+    <div class="slide" style="background-image: url('7.jpg');"></div>
+  </div>
+  <div class="hero-text">
+    <h1>Frequently Asked Questions</h1>
+  </div>
+</section>
+
+<div class="faq-intro" id="faq-intro">
+  <p>
+    At Mbhiyozo Attorneys Inc., we understand that legal processes can be confusing.<br> 
+    Below we have answered some of the most common questions our clients ask. If you don't see your question here, or you need further information, feel free to
+    <a href="contact.html" style="color: #d4af37; text-decoration: underline;">get in touch</a>.
+  </p>
+</div>
+
+
+
+  <section class="faq-section">
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        What types of cases do you handle?
+        <i data-lucide="chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        We provide expert legal services across a wide range of areas, including:<br>
+•  Criminal Litigation: Defending clients in cases like theft, assault, or fraud.<br>
+•  Civil Litigation: Resolving disputes such as property or contract issues.<br>
+•  General Litigation and ADR: Offering mediation, arbitration, or court representation.<br>
+•  Estates Planning and Wills: Drafting wills and managing trusts.<br>
+•  Family Law and Matrimonial Matters: Handling divorce, custody, and maintenance.<br>
+•  Medical Negligence: Pursuing claims for substandard medical care.<br>
+•  MVA and Personal Injury Claims: Securing compensation for accidents or injuries.<br>
+•  Contracts and Lease Agreements: Drafting and reviewing agreements.<br>
+•  Debt Collection: Recovering unpaid debts efficiently.Our team, led by Aluve Mbhiyozo, tailors solutions to meet your specific needs.
+
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        How long does it take to resolve a legal dispute?
+        <i data-lucide="chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+       The timeline depends on the case type and complexity. Mediation or arbitration can resolve disputes in weeks or months, while
+        litigation may take longer, especially if it proceeds to court. We strive to resolve matters efficiently, keeping you 
+        informed at every stage. 
+       During your consultation, we’ll provide a realistic timeline based on your case.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        How do I challenge and unfair dismissal?
+        <i data-lucide="chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        If you believe you were unfairly dismissed, you can refer your case to the Commission for Conciliation, Mediation and 
+        Arbitration (CCMA) within 30 days of dismissal. We assist with preparing your case, gathering evidence, and representing you 
+        in CCMA proceedings to seek reinstatement or compensation. 
+        Our litigation expertise ensures your rights are protected.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        How do I know if i need a lawyer?
+        <i data-lucide="chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+       If you’re facing a legal issue—whether it’s a criminal charge, a family dispute, an injury claim, or a contract concern—a 
+       lawyer can protect your rights and guide you toward the best outcome. 
+       We offer an initial consultation to assess your situation and advise on the next steps. Contact us to discuss your case.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        What is mediation, and is it right for my case?
+        <i data-lucide="chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+       Mediation is a voluntary, confidential process where a neutral mediator helps parties resolve disputes without going to court.
+        It’s cost-effective, faster, and less adversarial than litigation, making it ideal for family, civil, or commercial disputes. 
+       Our team is skilled in mediation and can advise if it suits your needs.
+      </div>
+    </div>
+
+     <div class="faq-item">
+      <div class="faq-question">
+        What should I expect in a divorce or a family law matter?
+        <i data-lucide="chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        Family law matters like divorce, child custody, or maintenance require sensitivity and expertise. We guide you through each 
+        step, from negotiation to court representation, ensuring fair outcomes. 
+        Expect an initial consultation to discuss your goals, followed by tailored advice on property division, parenting plans, 
+        or spousal support.
+      </div>
+    </div>
+
+     <div class="faq-item">
+      <div class="faq-question">
+        Can you help with drafting a will or planning my estate?
+        <i data-lucide="chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        Yes, we specialize in estates planning and wills. We draft clear, legally sound wills and establish trusts to protect your 
+        assets and ensure your wishes are honored.
+         Our personalized approach considers your family and financial circumstances, offering peace of mind for you and your 
+         loved ones.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        How do I claim compensation for medical negligence or car accident?
+        <i data-lucide="chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        For medical negligence, we investigate whether a healthcare provider’s substandard care caused you harm, pursuing 
+        compensation for damages. For MVA claims, we handle Road Accident Fund (RAF) applications or third-party claims to secure 
+        fair compensation. 
+        We manage the entire process, from evidence collection to settlement or trial, ensuring your recovery is prioritized.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        What are the costs of your legal services?
+        <i data-lucide="chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        We strive to provide affordable, transparent legal services. Costs vary based on the complexity of your case and the services
+         required (e.g., consultation, litigation, or drafting). We offer an initial consultation to discuss fees and payment options.
+          For certain cases, like personal injury claims, we may work on a contingency basis (no win, no fee).
+         Contact us for details.
+      </div>
+    </div>
+
+
+     <div class="faq-item">
+      <div class="faq-question">
+        How do I schedule a consultation?
+        <i data-lucide="chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        Getting started is simple:<br>
+1.  <a href="contact.html">Contact</a> us via phone, email, or our website’s contact form.<br>
+2.  Schedule an initial consultation to discuss your legal needs.<br>
+3.  We’ll assess your case, explain your options, and outline the next steps.<br>Based in the Eastern Cape, we serve clients 
+nationwide with passion and professionalism.<br> Reach out today to experience our dedicated service.
+
+      </div>
+    </div>
+  </section>
+
+  <div class="faq-contact-cta" id="faq-cta">
+    <a href="contact.html" class="slide-button">Still have questions? Contact us</a>
+  </div>
+
+<footer>&copy; 2025 Mbhiyozo Attorneys. All rights reserved.</footer>
+
+  
+
+<script>
+  
+
+  // Toggle FAQ accordion
+  document.querySelectorAll('.faq-question').forEach((q) => {
+    q.addEventListener('click', () => {
+      q.parentElement.classList.toggle('active');
+    });
+  });
+
+  // Reveal elements on scroll
+  const faqIntro = document.getElementById('faq-intro');
+  const faqCTA = document.getElementById('faq-cta');
+
+  window.addEventListener('scroll', () => {
+    const trigger = window.innerHeight * 0.85;
+
+    if (faqIntro.getBoundingClientRect().top < trigger) {
+      faqIntro.classList.add('visible');
+    }
+
+    if (faqCTA.getBoundingClientRect().top < trigger) {
+      faqCTA.classList.add('visible');
+    }
+  });
+</script>
+
+
+
+
+<script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

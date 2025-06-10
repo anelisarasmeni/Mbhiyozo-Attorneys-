@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MBHIYOZO ATTORNEYS</title>
+  <title>HOME | MBHIYOZO ATTORNEYS</title>
   <link rel="stylesheet" href="style.css" />
 
 <script src="https://unpkg.com/lucide@latest"></script>
@@ -31,6 +31,7 @@
       <li><a href="#">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="practice.html">Practice Areas</a></li>
+      <li><a href="faq.html">FAQ's</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
@@ -59,25 +60,29 @@
 
   <div class="areas-grid">
     <div class="area-card fade-in">
-      <i class="lucide lucide-shield"></i>
+      <div class="icon">
+      <i data-lucide="scale"></i></div>
       <h3>Criminal Litigation</h3>
       <p>Protecting your rights in all types of criminal cases.</p>
     </div>
 
     <div class="area-card fade-in">
-      <i class="lucide lucide-users"></i>
-      <h3>Cicil Litigation</h3>
+      <div class="icon">
+      <i data-lucide="scale"></i></div>
+      <h3>Civil Litigation</h3>
       <p>Handling disputes and conflicts while prioritizing your goals.</p>
     </div>
 
     <div class="area-card fade-in">
-      <i class="lucide lucide-file-text"></i>
+      <div class="icon">
+      <i data-lucide="scale"></i></div>
       <h3>General Litigation and Alternative Dispute Resolution (ADR)</h3>
       <p>Offering cost-effective and timely resolutions.</p>
     </div>
 
     <div class="area-card fade-in">
-      <i class="lucide lucide-briefcase"></i>
+      <div class="icon">
+      <i data-lucide="home"></i></div>
       <h3>Estate Planning and Wills</h3>
       <p>Securing your legacy with trusts, wills, and estates.</p>
     </div>
@@ -128,6 +133,8 @@
   faders.forEach(fadeEl => appearOnScroll.observe(fadeEl));
 </script>
 
-
+<script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
