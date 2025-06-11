@@ -296,7 +296,23 @@ nationwide with passion and professionalism.<br> Reach out today to experience o
 
 <footer>&copy; 2025 Mbhiyozo Attorneys. All rights reserved.</footer>
 
-  
+  <!-- JavaScript for Hamburger Toggle -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      hamburger.classList.toggle('active');
+
+      // Toggle icon between ☰ and ✕
+      if (hamburger.classList.contains('active')) {
+        hamburger.innerHTML = '&#10005;'; // ✕
+      } else {
+        hamburger.innerHTML = '&#9776;'; // ☰
+      }
+    });
+  </script>
 
 <script>
   
