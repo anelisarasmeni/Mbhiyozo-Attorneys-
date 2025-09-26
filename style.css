@@ -298,7 +298,7 @@ footer {
 }
 
 .logo img {
-  height: 80px;
+  height: 60px;
   width: auto;
   object-fit: contain;
 }
@@ -748,5 +748,6 @@ footer {
 .whatsapp-button:hover {
   background-color: #1ebe5b;
 }
+
 
 
