@@ -298,7 +298,7 @@ footer {
 }
 
 .logo img {
-  height: 50px;
+  height: 100px;
   width: auto;
   object-fit: contain;
 }
@@ -374,7 +374,7 @@ footer {
 }
 
 /* Scroll animation */
-.fade in {
+.fade-in {
   opacity: 0;
   transform: translateY(30px);
 }
@@ -748,3 +748,4 @@ footer {
 .whatsapp-button:hover {
   background-color: #1ebe5b;
 }
+
